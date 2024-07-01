@@ -1,0 +1,66 @@
+body {
+  overflow-x: hidden;
+  background-color: darkslategrey;
+}
+
+.main-image {
+  background: url(../public/images/bkimg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.filter:after {
+  background-color: rgba(0, 0, 0, 0.4);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.card-title {
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+  font-size: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/*About*/
+.about {
+  padding: 3rem 0;
+}
+.about-content {
+  gap: 4rem;
+}
+.about-title {
+  margin: 1rem 0;
+}
+.about-img img {
+  max-width: 520px;
+}
+.about-text p {
+  margin: 1.8rem 0;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 800px) {
+  .about-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-title {
+    margin-top: 0;
+  }
+  .about-img img {
+    margin-left: 0;
+  }
+}
